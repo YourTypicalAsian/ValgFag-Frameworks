@@ -6,15 +6,16 @@ var uglify = require('gulp-uglify');
 var watch = require('gulp-watch');
 
 
-function sass () {
+gulp.task('sass', async function(){
     return gulp.src('src/stylesheet/style.sass')
         .pipe(sass())
         .pipe(cssnano())
         .pipe(gulp.dest('public/css'));
-};
+});
 
-function watchFiles (){
-    gulp.watch('src/stylesheet/*.sass', sass);
-}
 
-gulp.task('start', gulp.series(sass, watchFiles));
+
+gulp.task("default", async function(){
+    gulp.watch("./src/stylesheet/*.sass",
+    gulp.series("sass"))
+})

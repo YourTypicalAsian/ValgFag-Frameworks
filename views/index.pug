@@ -4,8 +4,43 @@ html(lang="en")
         meta(charset="UTF-8")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
         meta(http-equiv="X-UA-Compatible", content="ie=edge")
-        <link rel="stylesheet" href="/css/style.css">
+        link(rel="stylesheet" href="/css/style.css")
         title Document
+
 body
-    h1=title
-    p=message
+    .search-bar
+        input#myinput(type='text' name='search' value='' autocomplete='off' onkeyup='searchFunction()' placeholder='Search')
+    ul(id="wrapper")
+        each p in kodeTing
+            li
+                a(href="#")= p.name
+                textarea(id=p.id).snippet(readonly)= p.snippet
+                p= p.desc
+                button(onclick=`myFunction(${p.id})`) Copy text                 
+    script.
+        function searchFunction() {
+            var input, filter, ul, li, a, i;
+            input = document.getElementById('myinput');
+            filter = input.value.toUpperCase();
+            ul = document.getElementById('wrapper');
+            li = ul.getElementsByTagName('li');
+        for(i=0 ; i< li.length; i++){
+            a = li[i].getElementsByTagName('a')[0];
+            if(a.innerHTML.toUpperCase().indexOf(filter) > -1){
+            li[i].style.display = "";
+            }else{
+                li[i].style.display = 'none';
+                }
+            }
+        }
+
+        function myFunction(id) {
+         /* Get the text field */
+        var copyText = document.getElementById(id);
+
+        /* Select the text field */
+        copyText.select();
+
+        /* Copy the text inside the text field */
+        document.execCommand("copy");
+        }

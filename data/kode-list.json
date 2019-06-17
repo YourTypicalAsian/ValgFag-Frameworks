@@ -1,0 +1,48 @@
+{
+    "kodeTing":[{
+        "id": 1,
+        "name": "route",
+        "snippet": "app.get('/', function (req, res, next) {res.render('index', data)});",
+        "desc": "Sådan ser en simple route ud"
+    }, {
+        "id": 2,
+        "name": "noget andet",
+        "snippet": "Lorem ipsum asfd asfd fsaf fgaeg adsfasd ",
+        "desc": "Haiii"
+    }, {
+        "id": 3,
+        "name": "lul",
+        "snippet": "Lorem ipsum asfd asfd fsaf fgaeg adsfasd ",
+        "desc": "Haiii"
+        }, {
+            "id": 4,
+            "name": "route",
+            "snippet": "app.get('/', function (req, res, next) {res.render('index', data)});",
+            "desc": "Sådan ser en simple route ud"
+        }, {
+            "id": 5,
+            "name": "noget andet",
+            "snippet": "Lorem ipsum asfd asfd fsaf fgaeg adsfasd ",
+            "desc": "Haiii"
+        }, {
+            "id": 6,
+            "name": "lul",
+            "snippet": "Lorem ipsum asfd asfd fsaf fgaeg adsfasd ",
+            "desc": "Haiii"
+            }, {
+        "id": 7,
+        "name": "route",
+        "snippet": "app.get('/', function (req, res, next) {res.render('index', data)});",
+        "desc": "Sådan ser en simple route ud"
+    }, {
+        "id": 8,
+        "name": "noget andet",
+        "snippet": "Lorem ipsum asfd asfd fsaf fgaeg adsfasd ",
+        "desc": "Haiii"
+    }, {
+        "id": 9,
+        "name": "lul",
+        "snippet": "Lorem ipsum asfd asfd fsaf fgaeg adsfasd ",
+        "desc": "Haiii"
+        } 
+  ]}
